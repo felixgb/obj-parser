@@ -1,7 +1,7 @@
 #[macro_use]
 extern crate nom;
 
-mod object;
+pub mod object;
 
 #[cfg(test)]
 mod tests {
@@ -10,7 +10,7 @@ mod tests {
 
     #[test]
     fn test_parse_load() {
-        let path = "src/african_head.obj";
+        let path = "african_head.obj";
         if let Ok(parsed) = object::parse_file_to_object(path) {
             println!("{:#?}", parsed);
             assert!(true);
